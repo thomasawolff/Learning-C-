@@ -69,7 +69,7 @@ namespace ExampleProj
 // Return type
 
 {
-    public class Program
+    public class Attributes
     {
         [Obsolete("OldMethod is obsolete, Please use the NewMethod instead.")]
         static void OldMethod() { }
@@ -95,15 +95,15 @@ namespace ExampleProj
         // public static void Main(string[] args)
         // {
         //     Program program = new Program();
-        //     program.Id = "1234";  using the set ability of the property
-        //     System.Diagnostics.Debug.WriteLine(program.Id);  using the get ability of the property
+        //     program.Id = "1234";  // using the set ability of the property
+        //     System.Diagnostics.Debug.WriteLine(program.Id);  // using the get ability of the property
         //     OldMethod();
 
         // }
     }
 
-    [AttributeUsage(AttributeTargets.All)]  Step 2: use the attribute usage attribute and pass in AttributeTargets.All: valid to all targets
-    public class ExampleAttribute : Attribute { }  Creating a custom attribtue: step 1, create a class the extends the attribute class
+    [AttributeUsage(AttributeTargets.All)]  //Step 2: use the attribute usage attribute and pass in AttributeTargets.All: valid to all targets
+    public class ExampleAttribute : Attribute { }  //Creating a custom attribtue: step 1, create a class the extends the attribute class
 
     class Example
     {
@@ -115,8 +115,8 @@ namespace ExampleProj
 
 }
 
-Lambda expressions: Two types
-Expression lamda: open & closed parenthesis,lamda operator, and the expression 
+//Lambda expressions: Two types
+//Expression lamda: open & closed parenthesis,lamda operator, and the expression 
 
 {
    namespace ExampleProj
