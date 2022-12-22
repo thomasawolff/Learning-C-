@@ -120,3 +120,67 @@ namespace Polymorphism
         }
     }
 }
+
+
+namespace partialClasses
+{
+    // The partial keyword can be used to split the definition of a class, method, interface, or struct into
+    // multiple files. Though they all must have the same access modifiers. Namespaces and classes must
+    // also have the same name.
+
+    public partial class PartialClass
+    {
+        void Method1() { }
+    }
+}
+
+
+namespace Indexers
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            ExampleClassWithIndexer exampleClassWithIndexer = new ExampleClassWithIndexer();
+            exampleClassWithIndexer[0] = "Hi";
+            exampleClassWithIndexer[1] = 2;
+            exampleClassWithIndexer[2] = true;
+            exampleClassWithIndexer[3] = 1.0f;
+
+            for(int i = 0; i < 4; i++)
+            {
+                System.Diagnostics.Debug.WriteLine(exampleClassWithIndexer[i]);
+            }
+        }
+    }
+
+    // Indexer is a special type of method to be added to a class so that it can be indexed like an array
+    // Indexers are referenced by the This keyword. Refers to the object instance
+    public class ExampleClassWithIndexer
+    {
+        private string[] dataArray = new string[100];
+        public object this[int index]
+        {
+            get { 
+                if(index < 0 || index >= dataArray.Length)
+                {
+                    System.Diagnostics.Debug.WriteLine("Invalid Index");
+                    return new object();
+                } else
+                {
+                    return dataArray[index];
+                }
+            }
+            set {
+                if (index < 0 || index >= dataArray.Length)
+                {
+                    System.Diagnostics.Debug.WriteLine("Invalid Index");
+                }
+                else
+                {
+                    dataArray[index] = (string) value;
+                }
+            }
+        }
+    }
+}
