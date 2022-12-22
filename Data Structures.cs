@@ -29,8 +29,8 @@ namespace DataStructures
     }
 
 
-     Lists automatically resize as the list grows
-     Lives in the systems.Collections.Generic namespace
+     // Lists automatically resize as the list grows
+     // Lives in the systems.Collections.Generic namespace
     class Lists
     {
         static List<int> numbers = new List<int>() { 1, 3, 5, 4, 2 };
@@ -361,6 +361,7 @@ namespace DataStructures
         //     }
         // }
     }
+
 
     public class SingularLinkedList
      //Sequence of data structures connected by links

@@ -68,6 +68,7 @@ namespace ExampleProj
 // Property
 // Return type
 
+namespace Attributes 
 {
     public class Attributes
     {
@@ -111,133 +112,151 @@ namespace ExampleProj
         private object exampleObj;
     }
 
-
-
 }
 
 //Lambda expressions: Two types
 //Expression lamda: open & closed parenthesis,lamda operator, and the expression 
 
-{
-   namespace ExampleProj
+namespace LambdaExpressions
    {
        public class Example
        {
         //    public static void Main(string[] args)
         //    {   
-        //        // Lambda parameters are only valid inside of the lambda and not valid inside the enclosing method
-        //        // This applies to return statements on the lambda function
-        //        // Return statement on the lambda will stop execution of lambda but outer method will continue to run
-        //        // Go to, break, continue only valid if inside the lambda block, cannot be used to jump to outer function
+                // Lambda parameters are only valid inside of the lambda and not valid inside the enclosing method
+                // This applies to return statements on the lambda function
+                // Return statement on the lambda will stop execution of lambda but outer method will continue to run
+                // Go to, break, continue only valid if inside the lambda block, cannot be used to jump to outer function
         //        Action<string> debug = (s) => System.Diagnostics.Debug.WriteLine("Hello World"); // Expression lambda passing parameter s
         //        debug("Example");
 
-        //        // Using Func to be able to call a lambda function to multiply two numbers
+                // Using Func to be able to call a lambda function to multiply two numbers
         //        Func<int, int, int> multiply = (x, y) => { return x * y; };
         //        System.Diagnostics.Debug.WriteLine(multiply(3, 2));
         //    }
        }
    }
 
-}
 
+namespace OverLoading
 {
-    namespace ExampleProj
+    // When overloading with this method, return types must be the same for each version
+    public class OverLoading 
     {
-        public static class Program // Extension Methods
-        {
-            public static bool GreaterThan(this int i, int val)
-            {
-                if (i > val)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
+        int AddNumbers(int a, int b) {return a + b;}
 
-        public class Example
-        {
-            public void PrintHelloWorld()
-            {
-                System.Diagnostics.Debug.WriteLine("Hello World");
-            }
+        int AddNumbers(int a, int b, int c) {return a + b + c;}
 
-            static async Task CookMeat() // using System.Threading.Tasks for async functions
-            {
-                Debug.WriteLine("Cook Meat");
-            }
-
-            static async Task CookVegetables()
-            {
-                Debug.WriteLine("Cook Vegetables");
-            }
-
-            static async Task MakeBread()
-            {
-                Debug.WriteLine("Make Bread");
-            }
-
-            static async Task MakeSoup()
-            {
-                Debug.WriteLine("Make Soup");
-            }
-
-            static async Task MakeSalad()
-            {
-                Debug.WriteLine("Make Salad");
-            }
-
-            static async Task MakeDrinks()
-            {
-                Debug.WriteLine("Make Drinks");
-            }
-
-            public static async Task MakeDinnerAsync()
-            {
-                await CookMeat();
-                await CookVegetables();
-                await MakeBread();
-                await MakeSoup();
-                await MakeSalad();
-                await MakeDrinks();
-            }
-        }
-
-        public class Example2 : Example // Using inheritance to print Hello World to the console
-        {
-            public void PrintHelloWorld() // Method overriding
-            {
-                System.Diagnostics.Debug.WriteLine("Hi world, how are you?");
-            }
-
-            public static void Example1(params string[] words) // Type of the params parameter has to be a single-dimensional array
-                                                               // Can only use the params parameter once in a method decleration
-                                                               // Cannot have multiple endless types for a method 
-            {
-                foreach (string word in words)
-                {
-                    System.Diagnostics.Debug.WriteLine(word);
-                }
-            }
-
-            //public static void Main(string[] args)
-            //{
-            //    Example2 ex2 = new Example2();
-            //        ex2.PrintHelloWorld();
-            //    Example1();
-            //    Example1("Hi");
-            //    Example1("Hi", "Hello World");
-            //    Example1("Hi", "Hello World", "Goodbye");
-
-            //    System.Diagnostics.Debug.WriteLine(8.GreaterThan(1));
-
-            //    MakeDinnerAsync();
-
-            //}
-        }
+        int AddNumbers(int a, int b, int c, int d) {return a + b + c + d;}
     }
 }
+
+
+namespace OverRiding 
+{
+    // Overriding: when a child class implements its own version of the parent class
+
+
+}
+
+
+
+namespace AsynchronousFunctions
+{
+    public static class Program // Extension Methods
+    {
+        public static bool GreaterThan(this int i, int val)
+        {
+            if (i > val)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
+    public class Example
+    {
+        public void PrintHelloWorld()
+        {
+            System.Diagnostics.Debug.WriteLine("Hello World");
+        }
+
+        static async Task CookMeat() // using System.Threading.Tasks for async functions
+        {
+            Debug.WriteLine("Cook Meat");
+        }
+
+        static async Task CookVegetables()
+        {
+            Debug.WriteLine("Cook Vegetables");
+        }
+
+        static async Task MakeBread()
+        {
+            Debug.WriteLine("Make Bread");
+        }
+
+        static async Task MakeSoup()
+        {
+            Debug.WriteLine("Make Soup");
+        }
+
+        static async Task MakeSalad()
+        {
+            Debug.WriteLine("Make Salad");
+        }
+
+        static async Task MakeDrinks()
+        {
+            Debug.WriteLine("Make Drinks");
+        }
+
+        public static async Task MakeDinnerAsync()
+        {
+            await CookMeat();
+            await CookVegetables();
+            await MakeBread();
+            await MakeSoup();
+            await MakeSalad();
+            await MakeDrinks();
+        }
+    }
+
+    public class Example2 : Example // Using inheritance to print Hello World to the console
+    {
+        public void PrintHelloWorld() // Method overriding
+        {
+            System.Diagnostics.Debug.WriteLine("Hi world, how are you?");
+        }
+
+        public static void Example1(params string[] words) // Type of the params parameter has to be a single-dimensional array
+                                                            // Can only use the params parameter once in a method decleration
+                                                            // Cannot have multiple endless types for a method 
+        {
+            foreach (string word in words)
+            {
+                System.Diagnostics.Debug.WriteLine(word);
+            }
+        }
+
+        //public static void Main(string[] args)
+        //{
+        //    Example2 ex2 = new Example2();
+        //        ex2.PrintHelloWorld();
+        //    Example1();
+        //    Example1("Hi");
+        //    Example1("Hi", "Hello World");
+        //    Example1("Hi", "Hello World", "Goodbye");
+
+        //    System.Diagnostics.Debug.WriteLine(8.GreaterThan(1));
+
+        //    MakeDinnerAsync();
+
+        //}
+    }
+}
+
