@@ -92,7 +92,31 @@ namespace Inheritance
     }
 }
 
+
 namespace Polymorphism
 {
+    public class Class1 
+    {
+        public virtual void Example() // Adding Virtual to the method makes base class method overridable for polymorphism
+        {
+            System.Diagnostics.Debug.WriteLine("Class 1's Example Method");
+        }
+    }
 
+    public class Class2 : Class1
+    {
+        public override void Example()// Adding Override allows Class2 method to override Class1 method
+        {
+            System.Diagnostics.Debug.WriteLine("Class 2's Example Method");
+        }
+    }
+
+    public class Class3
+    {
+        public static void Main(string[] args)
+        {
+            Class1 obj = new Class2();
+            obj.Example();
+        }
+    }
 }
