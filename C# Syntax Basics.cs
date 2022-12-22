@@ -1,4 +1,4 @@
-﻿/*
+﻿
 {
     class Program
     {
@@ -17,13 +17,13 @@
         }
     }
 }
-*/
+
 
 // C# is case sensitive with variable names
 // The first character must be a letter or underscore
 // C# variables can only contain letters, numbers, and underscore character
 
-/*
+
 class Program1
 {
     public static void Main(String[] args)
@@ -36,9 +36,9 @@ class Program1
         System.Diagnostics.Debug.WriteLine("Hi");
     }
 }
-*/
 
-/*
+
+
 class Program2
 {
     public static void Main(String[] args)
@@ -52,7 +52,7 @@ class Program2
     }
 }
 
-*/
+
 
 // There are 4 main access modifiers: public, protected, private, and internal
 
@@ -72,7 +72,7 @@ class Program2
 // If a class within a class, the internal class has a default access of private and outer class has default access of internal
 
 
-/*
+
 namespace ExampleProj2
 {
     class Program
@@ -83,9 +83,9 @@ namespace ExampleProj2
         }
     }
 }
-*/
 
-/*
+
+
 namespace ExampleProj3
 {
     class Program
@@ -98,13 +98,13 @@ namespace ExampleProj3
         }
     }
 }
-*/
+
 
 // Is operator: Used to check if a value is of a certain type
 // Helps avoid an InvalidCastException
 // Lets us know if we can case to a certain type
 
-/*
+
 public class Ex1 { }
 public class Ex2 : Ex1 { }
 
@@ -118,9 +118,9 @@ class Program
     }
 }
 
-*/
 
-/*
+
+
 namespace ExampleProj
 {
     class Program
@@ -133,7 +133,7 @@ namespace ExampleProj
         }
     }
 }
-*/
+
 
 namespace ExampleProj
 {

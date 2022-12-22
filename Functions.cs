@@ -9,22 +9,22 @@
 // We can initialize values inside constructors
 
 namespace ExampleProj
-//{
-//    public class Example
-//    {
-//        int exampleNumber;
-//        string exampleName;
+{
+    public class Example
+    {
+        int exampleNumber;
+        string exampleName;
 
-//        public Example(int num)
-//        {
-//            exampleNumber = num;
-//        }
+        public Example(int num)
+        {
+            exampleNumber = num;
+        }
 
-//        public Example(int num, string name)
-//        {
-//            exampleNumber = num;
-//            exampleName = name;
-//        }
+        public Example(int num, string name)
+        {
+            exampleNumber = num;
+            exampleName = name;
+        }
 
 //        public static void Main(string[] args)
 //        {
@@ -34,8 +34,8 @@ namespace ExampleProj
 
 //            // ~Example() { } <<--- finalizer
 //        }
-//    }
-//}
+    }
+}
 
 // Finalizers:
 // Similar to constructors, but finalizers are called when garbage is being collected by collector
@@ -68,78 +68,78 @@ namespace ExampleProj
 // Property
 // Return type
 
-//{
-//    public class Program
-//    {
-//        [Obsolete("OldMethod is obsolete, Please use the NewMethod instead.")]
-//        static void OldMethod() { }
+{
+    public class Program
+    {
+        [Obsolete("OldMethod is obsolete, Please use the NewMethod instead.")]
+        static void OldMethod() { }
 
-//        static void NewMethod() { }
+        static void NewMethod() { }
 
-//        public string Id_ { get; set; } // auto-implemented property
+        public string Id_ { get; set; }  auto-implemented property
 
-//        private string id;
+        private string id;
 
-//        public string Id
-//        {
-//            get
-//            {
-//                return id;
-//            }
-//            set
-//            {
-//                id = value;
-//            }
-//        }
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
 
-//        public static void Main(string[] args)
-//        {
-//            Program program = new Program();
-//            program.Id = "1234"; // using the set ability of the property
-//            System.Diagnostics.Debug.WriteLine(program.Id); // using the get ability of the property
-//            OldMethod();
+        // public static void Main(string[] args)
+        // {
+        //     Program program = new Program();
+        //     program.Id = "1234";  using the set ability of the property
+        //     System.Diagnostics.Debug.WriteLine(program.Id);  using the get ability of the property
+        //     OldMethod();
 
-//        }
-//    }
+        // }
+    }
 
-//    [AttributeUsage(AttributeTargets.All)] // Step 2: use the attribute usage attribute and pass in AttributeTargets.All: valid to all targets
-//    public class ExampleAttribute : Attribute { } // Creating a custom attribtue: step 1, create a class the extends the attribute class
+    [AttributeUsage(AttributeTargets.All)]  Step 2: use the attribute usage attribute and pass in AttributeTargets.All: valid to all targets
+    public class ExampleAttribute : Attribute { }  Creating a custom attribtue: step 1, create a class the extends the attribute class
 
-//    class Example
-//    {
-//        [ExampleAttribute]
-//        private object exampleObj;
-//    }
+    class Example
+    {
+        [ExampleAttribute]
+        private object exampleObj;
+    }
 
 
 
-//}
+}
 
-// Lambda expressions: Two types
-// Expression lamda: open & closed parenthesis,lamda operator, and the expression 
+Lambda expressions: Two types
+Expression lamda: open & closed parenthesis,lamda operator, and the expression 
 
-//{
-//    namespace ExampleProj
-//    {
-//        public class Example
-//        {
-//            public static void Main(string[] args)
-//            {   
-//                // Lambda parameters are only valid inside of the lambda and not valid inside the enclosing method
-//                // This applies to return statements on the lambda function
-//                // Return statement on the lambda will stop execution of lambda but outer method will continue to run
-//                // Go to, break, continue only valid if inside the lambda block, cannot be used to jump to outer function
-//                Action<string> debug = (s) => System.Diagnostics.Debug.WriteLine("Hello World"); // Expression lambda passing parameter s
-//                debug("Example");
+{
+   namespace ExampleProj
+   {
+       public class Example
+       {
+        //    public static void Main(string[] args)
+        //    {   
+        //        // Lambda parameters are only valid inside of the lambda and not valid inside the enclosing method
+        //        // This applies to return statements on the lambda function
+        //        // Return statement on the lambda will stop execution of lambda but outer method will continue to run
+        //        // Go to, break, continue only valid if inside the lambda block, cannot be used to jump to outer function
+        //        Action<string> debug = (s) => System.Diagnostics.Debug.WriteLine("Hello World"); // Expression lambda passing parameter s
+        //        debug("Example");
 
-//                // Using Func to be able to call a lambda function to multiply two numbers
-//                Func<int, int, int> multiply = (x, y) => { return x * y; };
-//                System.Diagnostics.Debug.WriteLine(multiply(3, 2));
-//            }
-//        }
-//    }
+        //        // Using Func to be able to call a lambda function to multiply two numbers
+        //        Func<int, int, int> multiply = (x, y) => { return x * y; };
+        //        System.Diagnostics.Debug.WriteLine(multiply(3, 2));
+        //    }
+       }
+   }
 
-//}
+}
 
 {
     namespace ExampleProj
