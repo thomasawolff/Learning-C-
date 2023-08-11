@@ -35,6 +35,11 @@ namespace OOP1
     }
 }
 
+// Public access modifier: anyone can access variable or function
+// Protected access modifier: only it's class and any sub-classes of its class can access the variable or function
+// Private access modifier: all access to variable or function has to be in the same (it's) class
+// Internal: only classes in the same assembly can access the variable or function.
+// We should make all variables private but access them through properties
 namespace OOP2
 {
     public abstract class Adding
