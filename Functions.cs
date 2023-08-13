@@ -77,7 +77,7 @@ namespace Attributes
 
         static void NewMethod() { }
 
-        public string Id_ { get; set; }  auto-implemented property
+        public string Id_ { get; set; }  // auto-implemented property
 
         private string id;
 
@@ -185,7 +185,7 @@ namespace AsynchronousFunctions
             System.Diagnostics.Debug.WriteLine("Hello World");
         }
 
-        static async Task CookMeat() // using System.Threading.Tasks for async functions
+		static async Task CookMeat() // using System.Threading.Tasks for async functions
         {
             Debug.WriteLine("Cook Meat");
         }

@@ -88,12 +88,12 @@ namespace Inheritance
 
     public class Class2 : Class1
     {
-        //public static void Main(string[] args)
-        //{
-        //    Class2 obj = new Class2();
-        //    obj.Print();
-        //    int myInt2 = obj.myInt;
-        //}
+        public static void Main(string[] args)
+        {
+            Class2 obj = new Class2();
+            obj.Print();
+            int myInt2 = obj.myInt;
+        }
     }
 }
 
@@ -116,14 +116,14 @@ namespace Polymorphism
         }
     }
 
-    public class Class3
-    {
-        public static void Main(string[] args)
-        {
-            Class1 obj = new Class2();
-            obj.Example();
-        }
-    }
+    //public class Class3
+    //{
+    //    public static void Main(string[] args)
+    //    {
+    //        Class1 obj = new Class2();
+    //        obj.Example();
+    //    }
+    //}
 }
 
 
@@ -144,19 +144,19 @@ namespace Indexers
 {
     public class Program
     {
-        public static void Main(string[] args)
-        {
-            ExampleClassWithIndexer exampleClassWithIndexer = new ExampleClassWithIndexer();
-            exampleClassWithIndexer[0] = "Hi";
-            exampleClassWithIndexer[1] = 2;
-            exampleClassWithIndexer[2] = true;
-            exampleClassWithIndexer[3] = 1.0f;
+        //public static void Main(string[] args)
+        //{
+        //    ExampleClassWithIndexer exampleClassWithIndexer = new ExampleClassWithIndexer();
+        //    exampleClassWithIndexer[0] = "Hi";
+        //    exampleClassWithIndexer[1] = 2;
+        //    exampleClassWithIndexer[2] = true;
+        //    exampleClassWithIndexer[3] = 1.0f;
 
-            for(int i = 0; i < 4; i++)
-            {
-                System.Diagnostics.Debug.WriteLine(exampleClassWithIndexer[i]);
-            }
-        }
+        //    for(int i = 0; i < 4; i++)
+        //    {
+        //        System.Diagnostics.Debug.WriteLine(exampleClassWithIndexer[i]);
+        //    }
+        //}
     }
 
     // Indexer is a special type of method to be added to a class so that it can be indexed like an array

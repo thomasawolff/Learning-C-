@@ -136,27 +136,27 @@ namespace FactoryMethod
             }
         }
 
-        public static void Main(string[] args)
-        {
-            CardFactory factory = null;
-            Console.WriteLine("Enter the card type you would like to create: ");
-            string card = Console.ReadLine();
+        //public static void Main(string[] args)
+        //{
+        //    CardFactory factory = null;
+        //    Console.WriteLine("Enter the card type you would like to create: ");
+        //    string card = Console.ReadLine();
 
-            switch (card.ToLower())
-            {
-                case "hoyle":
-                    factory = new HoyleFactory(5, "spades");
-                    break;
-                case "congress":
-                    factory = new CongressFactory(10, "hearts");
-                    break;
-                default:
-                    break;
-            }
+        //    switch (card.ToLower())
+        //    {
+        //        case "hoyle":
+        //            factory = new HoyleFactory(5, "spades");
+        //            break;
+        //        case "congress":
+        //            factory = new CongressFactory(10, "hearts");
+        //            break;
+        //        default:
+        //            break;
+        //    }
 
-            PlayingCard playingCard = factory.GetPlayingCard();
-            Console.WriteLine("Card Type: {0} \n Card Value: {1} \n Suit: {2}", playingCard.Type, playingCard.Value, playingCard.Suit);
-            Console.ReadKey();
-        }
+        //    PlayingCard playingCard = factory.GetPlayingCard();
+        //    Console.WriteLine("Card Type: {0} \n Card Value: {1} \n Suit: {2}", playingCard.Type, playingCard.Value, playingCard.Suit);
+        //    Console.ReadKey();
+        //}
     }
 }

@@ -158,7 +158,7 @@ namespace DataStructures
             top = -1;
         }
 
-        public void Push(object obj)  Push function
+        public void Push(object obj)  // Push function
         {
             if (top < MAX)  //To ensure that the stack has capacity to hold an object
             {
@@ -166,7 +166,7 @@ namespace DataStructures
             }
         }
 
-        public object Pop()  Pop function
+        public object Pop() // Pop function
         {
             if (top >= 0)  //Check if stack is not empty
             {
@@ -370,11 +370,11 @@ namespace DataStructures
     {
         public class Node
         {
-            public Node next;
-            public object data;
+            public Node? next;
+            public object? data;
         }
 
-        private Node root;
+        private Node? root;
 
         public Node First { get { return root; } }  //Enable us to obtain the first node in the list
 
@@ -382,7 +382,7 @@ namespace DataStructures
         {
             get
             {
-                Node currentNode = root;
+                Node? currentNode = root;
                 if (currentNode == null)
                 {
                     return null;

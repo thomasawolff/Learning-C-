@@ -3,7 +3,7 @@
 
 
 {
-    class Program2
+    class Program1
     {
         // public static void Main(string[] args)
         // {
@@ -23,11 +23,9 @@
         //     }
         // }
     }
-}
 
 
-{
-    class Program
+    class Program2
     {
         // public static void Main(string[] args)
         // {
@@ -72,11 +70,10 @@
 
         // }
     }
-}
 
 
-{
-    class Program
+
+    class Program3
     {
         // public static void Main(string[] args)
         // {
@@ -111,11 +108,8 @@
         //     }
         // }
     }
-}
 
-
-{
-    class Program
+    class Program4
     {
         // public static void Main(string[] args)
         // {
@@ -127,9 +121,7 @@
         //     }
         // }
     }
-}
 
-{
     public static class Exercise
     {
         // public static void Main()
@@ -148,12 +140,10 @@
         //     }
         // }
     }
-}
 
- A do while loop will be executed at least once because the boolean condition check happens outside of the code block
+ // A do while loop will be executed at least once because the boolean condition check happens outside of the code block
 
-{
-    class Program
+    class Program5
     {
         // public static void Main(String[] args)
         // {
@@ -166,12 +156,10 @@
         // }
     }
 
-}
 
- Breaks are used to terminate any control flow session
+ // Breaks are used to terminate any control flow session
 
-{
-    class Program
+    class Program6
     {
         // public static void Main(string[] args)
         // {
@@ -185,13 +173,11 @@
         //     }
         // }
     }
-}
 
- nested for loops with break statement:
- The break statement will break out of the inner most loop
+ //nested for loops with break statement:
+ //The break statement will break out of the inner most loop
 
-{
-    class Program
+    class Program7
     {
         // public static void Main(string[] args)
         // {
